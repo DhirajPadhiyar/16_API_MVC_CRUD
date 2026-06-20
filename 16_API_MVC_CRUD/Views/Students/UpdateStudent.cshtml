@@ -1,0 +1,27 @@
+﻿@model Student
+
+<div class="container">
+    <div class="card shadow-lg col-md-6 mx-auto p-4 myCard">
+        <h2 class="text-center text-danger">Update Student</h2>
+        <form asp-action="UpdateStudent" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control myInput" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="City" class="form-label"></label>
+                <input asp-for="City" class="form-control myInput" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex gap-3 mb-3 justify-content-center">
+                <button type="submit" class="btn btn-primary">Update</button>
+                <a asp-action="ListStudent" class="btn btn-secondary">Back</a>
+            </div>
+        </form>
+
+    </div>
+</div>
